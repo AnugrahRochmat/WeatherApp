@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.weather"
+    namespace = "anugrah.rochmat.weather"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.weather"
+        applicationId = "anugrah.rochmat.weather"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -109,6 +109,9 @@ dependencies {
 
     // Permission
     implementation(libs.google.accompanist.permissions)
+
+    // Coil-kt Coil Compose
+    implementation(libs.io.coilkt.coil.compose)
 
     // Testing
     testImplementation(libs.junit)
