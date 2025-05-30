@@ -6,9 +6,6 @@ import anugrah.rochmat.weatherapp.data.model.WeatherResponse
 import anugrah.rochmat.weatherapp.domain.entity.Forecast
 import anugrah.rochmat.weatherapp.domain.entity.ForecastItem
 import anugrah.rochmat.weatherapp.domain.entity.Weather
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 
 object WeatherMapper {
 

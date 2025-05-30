@@ -1,6 +1,5 @@
 package anugrah.rochmat.weatherapp.data.datasource.local
 
-import anugrah.rochmat.weatherapp.data.model.Sys
 import io.reactivex.rxjava3.core.Observable
 
 interface WeatherLocalDataSource {
