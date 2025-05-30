@@ -7,17 +7,21 @@ plugins {
 }
 
 android {
-    namespace = "com.example.weather"
+    namespace = "anugrah.rochmat.weather"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.weather"
-        minSdk = 24
+        applicationId = "anugrah.rochmat.weather"
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+
+        // OpenWeatherMap API key here
+        buildConfigField("String", "API_KEY", "\"280960578aeba46a8d8ae1da4780bc7d\"")
     }
 
     buildTypes {
@@ -105,6 +109,9 @@ dependencies {
 
     // Permission
     implementation(libs.google.accompanist.permissions)
+
+    // Coil-kt Coil Compose
+    implementation(libs.io.coilkt.coil.compose)
 
     // Testing
     testImplementation(libs.junit)

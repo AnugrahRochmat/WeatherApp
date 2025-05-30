@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">WeatherApp</string>
+    <string name="app_name">Weather App</string>
+    <string name="search">Search</string>
+    <string name="current_location">Current Location</string>
+    <string name="retry">Retry</string>
+    <string name="search_city">Search City</string>
+    <string name="city_name">City name</string>
+    <string name="cancel">Cancel</string>
+    <string name="feels_like">Feels like</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="pressure">Pressure</string>
+    <string name="forecast_5_day">5-Day Forecast</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="loading">Loading…</string>
+    <string name="degree_celsius">%.1f°C</string>
+    <string name="humid_percentage">%1$d %%</string>
+    <string name="wind_speed">%.1f m/s</string>
+    <string name="pressure_hpa">%1$d hPa</string>
+    <string name="forecast_temp_max">%.1f°</string>
+    <string name="forecast_temp_min"> / %.1f°</string>
+    <string name="weather_icon">Weather Icon</string>
 </resources>

@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+gradle.properties
+.idea/*
+!.idea/codeStyles
+!.idea/runConfigurations
+!.idea/inspectionProfiles
+.idea/inspectionProfiles/Project_Default.xml
