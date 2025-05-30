@@ -6,6 +6,26 @@ plugins {
     alias(libs.plugins.kotlin.parcelize)
 }
 
+fun validateApiKey(): String {
+    val apiKey = project.findProperty("WEATHER_API_KEY") as String?
+
+    return when {
+        apiKey == null -> {
+            throw GradleException(
+                "WEATHER_API_KEY not found in gradle.properties. \n" +
+                "Add WEATHER_API_KEY=your_key to /gradle.properties"
+            )
+        }
+        apiKey.isEmpty() -> {
+            throw GradleException(
+                "WEATHER_API_KEY cannot be empty. \n" +
+                "Add WEATHER_API_KEY=your_key to /gradle.properties"
+            )
+        }
+        else -> apiKey
+    }
+}
+
 android {
     namespace = "anugrah.rochmat.weather"
     compileSdk = 35
@@ -20,8 +40,9 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
 
-        // OpenWeatherMap API key here
-        buildConfigField("String", "API_KEY", "\"280960578aeba46a8d8ae1da4780bc7d\"")
+        // Setup OpenWeatherMap API key
+        val weatherApiKey = validateApiKey()
+        buildConfigField("String", "API_KEY", "\"$weatherApiKey\"")
     }
 
     buildTypes {
